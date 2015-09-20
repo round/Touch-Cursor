@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Touch Cursor Demo</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background: #888;
+			}
+			.background {
+				position: fixed;
+				z-index: 8;
+				width: 100%;
+				height: 100%;
+				background: #888 url(http://www.nature.nps.gov/air/webcams/parks/nacccam/washlarge.jpg) 50%/cover no-repeat fixed;
+				box-shadow: 0 0 33vw 0 rgba(0,0,0,.8) inset;
+				filter: blur(3px);
+				-webkit-filter: blur(3px);
+				transform: scale(1.025);
+				-webkit-transform: scale(1.025);
+			}
+			.device {
+				position: fixed;
+				z-index: 16;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background: url(iphone-6-spacegray-hand.png) 50%/auto 105% no-repeat fixed;
+				cursor: url(../assets/up/touch-cursor-up.png) 39 39, pointer;
+			}
+			.screen {
+				position: fixed;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				margin: auto;
+				width: 33vh;
+				height: 59vh;
+				background: url(http://www.nature.nps.gov/air/webcams/parks/nacccam/washlarge.jpg) 50%/cover no-repeat fixed;
+				cursor: url(../assets/over/touch-cursor-over.png) 39 39, crosshair;
+				z-index: 32;
+			}
+		</style>
+	</head>
+<body>
+	<div class='background'></div>
+	<div class='device'></div>
+	<div class='screen'></div>
+</body>
